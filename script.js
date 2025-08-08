@@ -2,10 +2,6 @@ cookies = 0
 upgrade = 1
 limit_upgrade = 50
 
-function getcookies() {
-    return cookies
-    //kim
-}
 
 function addingnum() {
     return cookies += upgrade;
@@ -23,6 +19,7 @@ function upgradeclick() {
         i = 1
     //kim
 }
+
 
 
 
