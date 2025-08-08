@@ -1,8 +1,10 @@
-let cookies = 0;
-let upgrade = 1;
 let limit_upgrade_click = 50;
 let limit_upgrade_pasive = 100;
+let upgrade_grandma = 150
 let passivenumclick = 0;
+let cookies = 0;
+let upgrade = 1;
+let limit_upgrade_grandma = 0;
 let intervalPointer = undefined;
 
 function addingnum() {
@@ -35,4 +37,12 @@ function passiveclick() {
         )
     }
 
+}
+function grandma() {
+    if (cookies >= limit_upgrade_grandma) {
+        upgrade_grandma = upgrade_grandma * 2;
+        cookies -= limit_upgrade_grandmak;
+        limit_upgrade_grandma = limit_upgrade_grandma * 2;
+        document.getElementById("displaycookie").innerHTML = cookies;
+    }
 }
