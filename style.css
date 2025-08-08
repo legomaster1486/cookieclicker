@@ -1,0 +1,23 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    
+    
+}
+div#left {
+    background-color: #429ceb;
+    grid-column: 1 / 2;
+        
+}
+
+div#right {
+    background-color: #513d36;
+    grid-column: 3 / 4;
+}
+div#middle {
+    background-color: hotpink;
+    grid-column: 2 / 3;
+}
+button#cookie {
+    border-radius: 300px;
+}
