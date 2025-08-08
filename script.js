@@ -1,26 +1,38 @@
-cookies = 0
-upgrade = 1
-limit_upgrade = 50
-
+let cookies = 0;
+let upgrade = 1;
+let limit_upgrade_click = 50;
+let limit_upgrade_pasive = 100;
+let passivenumclick = 0;
+let intervalPointer = undefined;
 
 function addingnum() {
-    return cookies += upgrade;
-    
+    cookies += upgrade;
+    document.getElementById("displaycookie").innerHTML = cookies;
+
 }
 
 function upgradeclick() {
-    if(cookies >= limit_upgrade){
+    if (cookies >= limit_upgrade_click) {
         upgrade = upgrade * 2;
-        cookies -= limit_upgrade;
-        limit_upgrade = limit_upgrade*4
+        cookies -= limit_upgrade_click;
+        limit_upgrade_click = limit_upgrade_click * 2;
+        document.getElementById("displaycookie").innerHTML = cookies;
     }
-
-    else
-        i = 1
-    //kim
 }
 
+function passiveclick() {
+    if (cookies >= limit_upgrade_pasive) {
+        cookies -= limit_upgrade_pasive;
+        limit_upgrade_pasive = limit_upgrade_pasive * 2;
+        ++passivenumclick;
+        document.getElementById("displaycookie").innerHTML = cookies;
+        if (intervalPointer !== undefined) {
+            clearInterval(intervalPointer)
+        }
+        intervalPointer = setInterval(
+            addingnum,
+            60_000 / passivenumclick
+        )
+    }
 
-
-
-
+}
