@@ -2,7 +2,7 @@ cookies = 0
 upgrade = 1
 limit_upgrade = 50
 while (true) {
-    document.getElementById("displaycookie").innerHTML = cookies;
+    //document.getElementById("displaycookie").innerHTML = cookies;
     console.log(cookies);
 }
 function getcookies() {
@@ -26,5 +26,6 @@ function upgradeclick() {
         i = 1
     //kim
 }
+
 
 
