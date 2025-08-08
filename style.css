@@ -7,6 +7,7 @@ body {
 div#left {
     background-color: #429ceb;
     grid-column: 1 / 2;
+    display: flexbox;
         
 }
 
@@ -19,5 +20,19 @@ div#middle {
     grid-column: 2 / 3;
 }
 button#cookie {
-    border-radius: 300px;
+    border-radius: 360px;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    height: 350;
+    width: 350;
+    justify-content: center;
+    align-items: center;
 }
+img#cookie {
+    padding: 0;
+    margin: 0;
+}
+
+
