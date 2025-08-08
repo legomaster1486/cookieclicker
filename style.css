@@ -1,18 +1,25 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
 body {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    
-    
+    margin: 0;
+    height: 100%;    
 }
 div#left {
     background-color: #429ceb;
     grid-column: 1 / 2;
     display: flexbox;
-        
 }
 
 div#right {
-    background-color: #513d36;
+    background-color: aqua;
     grid-column: 3 / 4;
 }
 div#middle {
@@ -34,5 +41,18 @@ img#cookie {
     padding: 0;
     margin: 0;
 }
+#buildings {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(10, 1fr);
+}
+.buildingbtn {
+    height: 50px;
+}
+.upgradebtn {
+    height: 50px;
+    width: 50px;
+}
+
 
 
